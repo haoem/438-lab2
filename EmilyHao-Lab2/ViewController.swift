@@ -14,6 +14,7 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    // ok waht the heck man why is this so hard
 
 }
 

@@ -13,6 +13,7 @@
 		1BD894BC2C926BBA00F09209 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1BD894BB2C926BBA00F09209 /* Base */; };
 		1BD894BE2C926BBB00F09209 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1BD894BD2C926BBB00F09209 /* Assets.xcassets */; };
 		1BD894C12C926BBB00F09209 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 1BD894C02C926BBB00F09209 /* Base */; };
+		1BD894C92C9270A600F09209 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BD894C82C9270A600F09209 /* DisplayView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		1BD894BD2C926BBB00F09209 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BD894C02C926BBB00F09209 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1BD894C22C926BBB00F09209 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1BD894C82C9270A600F09209 /* DisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +58,7 @@
 		1BD894B32C926BBA00F09209 /* EmilyHao-Lab2 */ = {
 			isa = PBXGroup;
 			children = (
+				1BD894C82C9270A600F09209 /* DisplayView.swift */,
 				1BD894B42C926BBA00F09209 /* AppDelegate.swift */,
 				1BD894B62C926BBA00F09209 /* SceneDelegate.swift */,
 				1BD894B82C926BBA00F09209 /* ViewController.swift */,
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1BD894B92C926BBA00F09209 /* ViewController.swift in Sources */,
+				1BD894C92C9270A600F09209 /* DisplayView.swift in Sources */,
 				1BD894B52C926BBA00F09209 /* AppDelegate.swift in Sources */,
 				1BD894B72C926BBA00F09209 /* SceneDelegate.swift in Sources */,
 			);

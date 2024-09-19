@@ -35,51 +35,74 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        happinessBar.value = 0.5
-        happinessBar.color = .darkGray
-        happinessBar.animateValue(to: 1.0)
-        
-        foodBar.value = 0.5
-        foodBar.color = .darkGray
-        foodBar.animateValue(to: 1.0)
-        
         petArray = initializePets()
-        
         updateViews(pet: petArray[0])
     }
     
     func initializePets() -> [Pet] {
-        let pet1 = Pet(name:"dog", image: UIImage(named:"dog")!, color: .red)
-        let pet2 = Pet(name:"cat", image: UIImage(named:"cat")!, color: .yellow)
-        let pet3 = Pet(name:"bird", image: UIImage(named:"bird")!, color: .green)
-        let pet4 = Pet(name:"bunny", image: UIImage(named:"bunny")!, color: .blue)
-        let pet5 = Pet(name:"fish", image: UIImage(named:"fish")!, color: .purple)
+        let pet1 = Pet(name:"dog", image: UIImage(named:"dog")!, color: .systemRed)
+        let pet2 = Pet(name:"cat", image: UIImage(named:"cat")!, color: .systemOrange)
+        let pet3 = Pet(name:"bird", image: UIImage(named:"bird")!, color: .systemTeal)
+        let pet4 = Pet(name:"bunny", image: UIImage(named:"bunny")!, color: .systemPink)
+        let pet5 = Pet(name:"fish", image: UIImage(named:"fish")!, color: .systemBlue)
         
         return [pet1, pet2, pet3, pet4, pet5]
     }
     
     func updateViews(pet: Pet) {
-        imageView.image = pet.image
-        backgroundView.backgroundColor = pet.color
         activePet = pet
+        updateImage(pet: activePet!)
+        
+        backgroundView.backgroundColor = pet.color
+        happinessBar.color = pet.color
+        foodBar.color = pet.color
+
+        playButton.tintColor = pet.color
+        feedButton.tintColor = pet.color
+        
+        // recognizing that this is a moronic way to do it but
+        dogB.tintColor = pet.color
+        catB.tintColor = pet.color
+        birdieB.tintColor = pet.color
+        bunnyB.tintColor = pet.color
+        fishB.tintColor = pet.color
+        
         updateLabels(pet: activePet!)
         print("updateViews() was called, active pet is now ", pet.name)
+    }
+    
+    // THIS IS MY CREATIVE PORTION
+    func updateImage(pet: Pet) {
+        imageView.image = pet.image
+        
+        if (pet.isDead) {
+            UIView.animate(withDuration: 1.0, delay: 0, options: [.curveEaseIn], animations: {
+                    self.imageView.transform = CGAffineTransform(rotationAngle: CGFloat.pi)
+            })
+        } else {
+            imageView.transform = .identity
+        }
+        
+        if (pet.ranAway) {
+            UIView.animate(withDuration: 1.0, animations: {
+                self.imageView.alpha = 0.0
+            }) // HELP THIS SENDS ME
+        } else {
+            imageView.alpha = 1.0
+        }
     }
     
     func updateLabels(pet: Pet) {
         let happiness = Int(pet.happiness)
         let satiety = Int(pet.satiety)
 
-        happinessVal.text = String(happiness)
-        foodVal.text = String(satiety)
+        happinessVal.text = String("Times played: \(pet.timesPlayed)")
+        foodVal.text = String("Times fed: \(pet.timesFed)")
         
         happinessBar.animateValue(to: CGFloat(happiness) / 100.0)
         foodBar.animateValue(to: CGFloat(satiety) / 100.0)
-        print("updateLabels() was called on a nil")
-    }
-    
-    func updateBars(pet: Pet) {
         
+        updateImage(pet: pet)
     }
     
     @IBAction func dogSwitch(_ sender: Any) {

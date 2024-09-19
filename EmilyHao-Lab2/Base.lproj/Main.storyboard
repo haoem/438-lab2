@@ -61,6 +61,7 @@
                                             <constraint firstItem="4Fe-SQ-606" firstAttribute="leading" secondItem="DmK-Yz-Oq0" secondAttribute="leading" id="8yl-tv-bqW"/>
                                             <constraint firstItem="4Fe-SQ-606" firstAttribute="centerY" secondItem="DmK-Yz-Oq0" secondAttribute="centerY" id="E7z-rl-3lm"/>
                                             <constraint firstAttribute="trailing" secondItem="4Fe-SQ-606" secondAttribute="trailing" multiplier="3" id="IHG-SI-5S0"/>
+                                            <constraint firstItem="BtM-9j-TGv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="4Fe-SQ-606" secondAttribute="trailing" constant="8" symbolic="YES" id="Lkb-S9-Hpq"/>
                                             <constraint firstItem="BtM-9j-TGv" firstAttribute="width" secondItem="4Fe-SQ-606" secondAttribute="width" id="Sjy-Q7-PGP"/>
                                             <constraint firstItem="4Fe-SQ-606" firstAttribute="height" secondItem="DmK-Yz-Oq0" secondAttribute="height" id="YyW-eL-rsb"/>
                                             <constraint firstAttribute="trailing" secondItem="BtM-9j-TGv" secondAttribute="trailing" id="dCP-jN-Gxm"/>
@@ -131,7 +132,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MpS-kT-qgq" userLabel="happinessBar" customClass="DisplayView" customModule="EmilyHao_Lab2" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MpS-kT-qgq" userLabel="happinessBar" customClass="DisplayView" customModule="EmilyHao_Lab2" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="50" width="392" height="27.666666666666671"/>
                                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                                     </view>
@@ -147,6 +148,7 @@
                                                     <constraint firstItem="MpS-kT-qgq" firstAttribute="width" secondItem="CPa-dY-J2n" secondAttribute="width" constant="-20" id="eqM-bh-hlg"/>
                                                     <constraint firstItem="5eZ-CW-5eq" firstAttribute="top" secondItem="CPa-dY-J2n" secondAttribute="top" constant="1" id="lbf-fQ-GUg"/>
                                                     <constraint firstItem="5eZ-CW-5eq" firstAttribute="height" secondItem="CPa-dY-J2n" secondAttribute="height" multiplier="0.5" id="r8c-3q-eNz"/>
+                                                    <constraint firstItem="5eZ-CW-5eq" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="cOe-dh-a9l" secondAttribute="trailing" constant="8" symbolic="YES" id="s6x-xl-3LE"/>
                                                     <constraint firstItem="MpS-kT-qgq" firstAttribute="height" secondItem="CPa-dY-J2n" secondAttribute="height" multiplier="0.25" id="tFL-4g-bjW"/>
                                                 </constraints>
                                             </view>
@@ -165,7 +167,7 @@
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2F9-XL-Ta9" userLabel="foodBar" customClass="DisplayView" customModule="EmilyHao_Lab2" customModuleProvider="target">
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2F9-XL-Ta9" userLabel="foodBar" customClass="DisplayView" customModule="EmilyHao_Lab2" customModuleProvider="target">
                                                         <rect key="frame" x="10" y="50" width="392" height="27.666666666666671"/>
                                                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                                     </view>
@@ -182,6 +184,7 @@
                                                     <constraint firstItem="N7W-km-lRM" firstAttribute="height" secondItem="ySA-zm-sKe" secondAttribute="height" multiplier="0.5" id="reo-kt-eVC"/>
                                                     <constraint firstItem="2F9-XL-Ta9" firstAttribute="height" secondItem="ySA-zm-sKe" secondAttribute="height" multiplier="0.25" id="tjo-sl-k5o"/>
                                                     <constraint firstItem="2F9-XL-Ta9" firstAttribute="top" secondItem="ySA-zm-sKe" secondAttribute="top" constant="50" id="vw9-bs-t39"/>
+                                                    <constraint firstItem="N7W-km-lRM" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="eCD-FD-UW0" secondAttribute="trailing" constant="8" symbolic="YES" id="ygM-Vs-hUj"/>
                                                 </constraints>
                                             </view>
                                         </subviews>
